@@ -1,0 +1,28 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url('back.gif'); /* Замість 'your-gif-background.gif' вкажіть шлях до вашої гіфки */
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}

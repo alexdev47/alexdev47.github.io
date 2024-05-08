@@ -13,9 +13,29 @@ body, html {
     background-position: center;
 }
 
+.header {
+    position: absolute;
+    top: 20px; /* змініть це значення за необхідності, щоб відрегулювати відступ від верхнього краю */
+    left: 20px; /* змініть це значення за необхідності, щоб відрегулювати відступ від лівого краю */
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 10em;
+}
+
 .content {
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
 h1 {

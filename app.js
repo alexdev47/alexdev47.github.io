@@ -1,0 +1,35 @@
+Telegram.WebApp.ready()
+
+try{
+    document.querySelector('.greatings').value = 'Hi, ' + window.Telegram.WebApp.user;
+}
+
+catch(err) {
+    console.error(err);
+}
+
+let postDate = document.querySelector('.date');
+let text = document.querySelector('.textContainer')
+let safeBtn = document.querySelector('.safeBtn');
+let deleteBtn = document.querySelector('.deleteBtn');
+let setDateBtn = document.querySelector('.setDateBtn');
+
+setDateBtn.addEventListener('click', function() {
+    if (localStorage.getItem(postDate.value) == null) {
+        text.value = '';
+    } else {
+        text.value = localStorage.getItem(postDate.value);
+    }
+})
+
+
+safeBtn.addEventListener('click', function() {
+    localStorage.setItem(postDate.value, text.value);
+})
+
+deleteBtn.addEventListener('click', function() {
+    localStorage.removeItem(postDate.value);
+    text.value = '';
+})
+
+

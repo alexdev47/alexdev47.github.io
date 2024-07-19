@@ -1,54 +1,68 @@
-body{
-    background: #C2A878;
-}
-
-  
-  
-
 
 .greatings{
     text-align: center;
     font-size: 90px;
-    margin-top: 130px;
 }
 
-.feelings{
+body {
+    background: #C2A878;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.feelings {
     text-align: center;
     font-size: 60px;
+    margin: 10px 0; 
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 10px 0; 
 }
 
 .date {
     width: 300px;
     height: 50px;
-
     font-size: 30px;
     border-radius: 25px;
     background: #E5ECE9;
+}
+
+.setDateBtn {
+    width: 200px;
+    height: 50px;
+    margin-left: 30px;
+    font-size: 40px;
+    border-radius: 15px;
 }
 
 .mainTextContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 10px 0; 
 }
 
 .textContainer {
-    margin-top: 50px;
-    width: 600px;
+    width: 60%;
     height: 900px;
-
-    text-align: left; 
-    direction: ltr;    
-    padding: 10px;     
-    resize: none;      
+    text-align: left;
+    direction: ltr;
+    padding: 10px;
+    resize: none;
     box-sizing: border-box;
-
     font-size: 30px;
     border-radius: 25px;
     background: #E5ECE9;
@@ -58,31 +72,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-top: 30px;
+    width: 100%;
+    margin: 10px 0; 
 }
 
-.safeBtn {
+.safeBtn, .deleteBtn {
     height: 80px;
     width: 300px;
-
     font-size: 40px;
     border-radius: 15px;
-}
-
-.deleteBtn {
-    height: 80px;
-    width: 300px;
-
-    font-size: 40px;
-    border-radius: 15px;
-}
-
-.setDateBtn {
-    width: 200px;
-    height: 50px;
-
-    margin-left: 30px;
-    font-size: 40px;
-    border-radius: 15px;
+    margin: 0 10px;
 }

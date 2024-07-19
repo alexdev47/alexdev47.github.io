@@ -1,3 +1,9 @@
+
+.greatings{
+    text-align: center;
+    font-size: 90px;
+}
+
 body {
     background: #C2A878;
     margin: 0;
@@ -5,32 +11,15 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.content {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
     box-sizing: border-box;
-    overflow: auto;
-}
-
-.greetings {
-    text-align: center;
-    font-size: 50px;
-    margin: 10px 0;
 }
 
 .feelings {
     text-align: center;
-    font-size: 30px;
-    margin: 10px 0;
+    font-size: 60px;
+    margin: 10px 0; 
 }
 
 .container {
@@ -38,22 +27,22 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0; 
 }
 
 .date {
-    width: 60%;
-    height: 40px;
-    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
     border-radius: 25px;
     background: #E5ECE9;
 }
 
 .setDateBtn {
-    width: 30%;
-    height: 40px;
-    margin-left: 10px;
-    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    margin-left: 30px;
+    font-size: 40px;
     border-radius: 15px;
 }
 
@@ -62,62 +51,34 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0; 
 }
 
 .textContainer {
-    width: 100%;
-    height: 300px;
+    width: 60%;
+    height: 900px;
     text-align: left;
     direction: ltr;
     padding: 10px;
     resize: none;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 30px;
     border-radius: 25px;
     background: #E5ECE9;
 }
 
 .divSafeBtn {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 10px 0;
     width: 100%;
+    margin: 10px 0; 
 }
 
 .safeBtn, .deleteBtn {
-    height: 50px;
-    width: 45%;
-    font-size: 18px;
+    height: 80px;
+    width: 300px;
+    font-size: 40px;
     border-radius: 15px;
-    margin: 0 5px;
-}
-
-@media (max-width: 768px) {
-    .greetings {
-        font-size: 40px;
-    }
-    
-    .feelings {
-        font-size: 25px;
-    }
-    
-    .date, .setDateBtn {
-        width: 100%;
-        height: 30px;
-        font-size: 16px;
-        margin: 5px 0;
-    }
-    
-    .textContainer {
-        height: 150px;
-        font-size: 14px;
-    }
-    
-    .safeBtn, .deleteBtn {
-        height: 40px;
-        width: 45%;
-        font-size: 16px;
-    }
+    margin: 0 10px;
 }

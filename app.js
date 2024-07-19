@@ -1,18 +1,29 @@
-Telegram.WebApp.ready()
+window.Telegram.WebApp.onEvent('webAppReady', function() {
+    try {
+        const user = window.Telegram.WebApp.WebAppUser;
+        if (user) {
+            const greetingsElement = document.querySelector('.greatings');
+            if (greetingsElement) {
+                greetingsElement.value = 'Hi, ' + user.username;
+                window.Telegram.WebApp.MainButton.show();
 
-try{
-    document.querySelector('.greatings').value = 'Hi, ' + window.Telegram.WebApp.WebAppUser.username;
-    window.Telegram.WebApp.MainButton.show();
-    let premium = window.Telegram.WebApp.WebAppUser.is_premium;
-
-    if (premium == true) {
-        document.querySelector('.greatings').value = 'Hi, ' + window.Telegram.WebApp.WebAppUser.username + '*****';
+                if (user.is_premium) {
+                    greetingsElement.value = 'Hi, ' + user.username + '*****';
+                }
+            } else {
+                console.error('Element with class "greatings" not found.');
+            }
+        } else {
+            console.error('WebAppUser object not found.');
+        }
+    } catch (err) {
+        console.error(err);
     }
-}
+});
 
-catch(err) {
-    console.error(err);
-}
+
+
+
 
 let postDate = document.querySelector('.date');
 let text = document.querySelector('.textContainer')

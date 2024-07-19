@@ -1,7 +1,13 @@
 Telegram.WebApp.ready()
 
 try{
-    document.querySelector('.greatings').value = 'Hi, ' + window.Telegram.WebApp.user;
+    document.querySelector('.greatings').value = 'Hi, ' + window.Telegram.WebApp.WebAppUser.username;
+    window.Telegram.WebApp.MainButton.show();
+    let premium = window.Telegram.WebApp.WebAppUser.is_premium;
+
+    if (premium == true) {
+        document.querySelector('.greatings').value = 'Hi, ' + window.Telegram.WebApp.WebAppUser.username + '*****';
+    }
 }
 
 catch(err) {

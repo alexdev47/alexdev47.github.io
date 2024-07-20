@@ -1,8 +1,4 @@
 
-.greatings{
-    text-align: center;
-    font-size: 60px;
-}
 
 body {
     background: #C2A878;
@@ -32,7 +28,7 @@ body {
 
 .date {
     width: 250px;
-    height: 50px;
+    height: 80px;
     font-size: 30px;
     border-radius: 25px;
     background: #E5ECE9;
@@ -40,9 +36,9 @@ body {
 
 .setDateBtn {
     width: 150px;
-    height: 50px;
-    margin-left: 30px;
-    font-size: 40px;
+    height: 80px;
+    margin-left: 10px;
+    font-size: 30px;
     border-radius: 15px;
 }
 
@@ -56,7 +52,7 @@ body {
 }
 
 .textContainer {
-    width: 60%;
+    width: 90%;
     height: 90%;
     text-align: left;
     direction: ltr;

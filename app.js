@@ -1,8 +1,10 @@
 Telegram.WebApp.ready();
 
 try {
-    let username = Telegram.WebApp.initData.user;
+    let username = Telegram.WebApp.initData.user.username;
+    let prem = Telegram.WebApp.initData.user.is_premium;
     console.log(username);
+    console.log(prem);
 }
 catch (error) {
     console.error( 'cought: ' + error);

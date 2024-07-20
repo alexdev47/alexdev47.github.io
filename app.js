@@ -1,3 +1,21 @@
+Telegram.WebApp.ready();
+
+try {
+    let username = Telegram.WebApp.WebAppUser.username;
+    console.log(username);
+}
+catch (error) {
+    console.error( 'cought: ' + error);
+}
+
+function popUp() {
+    try {
+        Telegram.WebApp.showAlert('Saved')
+    }
+    catch (error) {
+        console.error( 'cought: ' + error);
+    }
+}
 
 
 

@@ -1,5 +1,11 @@
 Telegram.WebApp.ready();
 
+let postDate = document.querySelector('.date');
+let text = document.querySelector('.textContainer')
+let safeBtn = document.querySelector('.safeBtn');
+let deleteBtn = document.querySelector('.deleteBtn');
+
+
 try {
     let username = Telegram.WebApp.initData.user.username;
     let prem = Telegram.WebApp.initData.user.is_premium;
@@ -19,11 +25,27 @@ function popUp() {
     }
 }
 
+function showPopup() {
+    Telegram.WebApp.showPopup({
+        title: 'Delete',
+        message: 'Are you shure?',
+        buttons: [
+            {id: 'link', type: 'default', text: 'Yes'},
+            {type: 'cancel', text: 'No'},
+        ]
+    }, function(btn) {
+        if (btn === 'link') {
+                localStorage.removeItem(postDate.value);
+                text.value = '';
+            
+                deleteBtn.style.background = '#bebebe';
+                setTimeout(() => {
+                    deleteBtn.style.background = '#E5ECE9';
+                  }, "100");
+        }
+    });
+};
 
-let postDate = document.querySelector('.date');
-let text = document.querySelector('.textContainer')
-let safeBtn = document.querySelector('.safeBtn');
-let deleteBtn = document.querySelector('.deleteBtn');
 
 
 
@@ -71,14 +93,5 @@ safeBtn.addEventListener('click', function() {
     
 })
 
-deleteBtn.addEventListener('click', function() {
-    localStorage.removeItem(postDate.value);
-    text.value = '';
-
-    deleteBtn.style.background = '#bebebe';
-    setTimeout(() => {
-        deleteBtn.style.background = '#E5ECE9';
-      }, "100");
-})
-
+deleteBtn.addEventListener('click', showPopup);
 

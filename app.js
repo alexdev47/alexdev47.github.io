@@ -1,27 +1,10 @@
-window.Telegram.WebApp.onEvent('webAppReady', function() {
-    try {
-        const user = window.Telegram.WebApp.WebAppUser;
-        if (user) {
-            const greetingsElement = document.querySelector('.greatings');
-            if (greetingsElement) {
-                greetingsElement.value = 'Hi, ' + user.username;
-                window.Telegram.WebApp.MainButton.show();
-
-                if (user.is_premium) {
-                    greetingsElement.value = 'Hi, ' + user.username + '*****';
-                }
-            } else {
-                console.error('Element with class "greatings" not found.');
-            }
-        } else {
-            console.error('WebAppUser object not found.');
-        }
-    } catch (err) {
-        console.error(err);
-    }
+Telegram.WebApp.MainButton.setParams({
+    text: 'Main Button'
 });
-
-
+Telegram.WebApp.MainButton.onClick(function () {
+    Telegram.WebApp.showAlert('Main Button was clicked')
+});	
+Telegram.WebApp.MainButton.show();
 
 
 

@@ -1,7 +1,7 @@
 Telegram.WebApp.ready();
 
 try {
-    let username = Telegram.WebApp.user;
+    let username = Telegram.WebApp.initData.user;
     console.log(username);
 }
 catch (error) {

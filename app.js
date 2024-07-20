@@ -20,8 +20,6 @@ function popUp() {
 }
 
 
-
-
 let postDate = document.querySelector('.date');
 let text = document.querySelector('.textContainer')
 let safeBtn = document.querySelector('.safeBtn');
@@ -34,16 +32,33 @@ setDateBtn.addEventListener('click', function() {
     } else {
         text.value = localStorage.getItem(postDate.value);
     }
+
+    setDateBtn.style.background = '#bebebe';
+    setTimeout(() => {
+        setDateBtn.style.background = '#E5ECE9';
+      }, "100");
 })
 
 
 safeBtn.addEventListener('click', function() {
     localStorage.setItem(postDate.value, text.value);
+
+    safeBtn.style.background = '#bebebe';
+    setTimeout(() => {
+        safeBtn.style.background = '#E5ECE9';
+      }, "100");
+
+    
 })
 
 deleteBtn.addEventListener('click', function() {
     localStorage.removeItem(postDate.value);
     text.value = '';
+
+    deleteBtn.style.background = '#bebebe';
+    setTimeout(() => {
+        deleteBtn.style.background = '#E5ECE9';
+      }, "100");
 })
 
 

@@ -35,16 +35,6 @@ body {
     border: 0px;
 }
 
-.setDateBtn {
-    width: 150px;
-    height: 80px;
-    margin-left: 10px;
-    font-size: 30px;
-    border-radius: 15px;
-    background: #E5ECE9;
-    border: 0px;
-}
-
 .mainTextContainer {
     display: flex;
     justify-content: center;

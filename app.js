@@ -26,9 +26,15 @@ function popUp() {
 }
 
 function showPopup() {
+    deleteBtn.style.background = '#bebebe';
+    setTimeout(() => {
+        deleteBtn.style.background = '#E5ECE9';
+      }, "100");
+
+    
     Telegram.WebApp.showPopup({
         title: 'Delete',
-        message: 'Are you shure?',
+        message: 'Are you sure?',
         buttons: [
             {id: 'link', type: 'default', text: 'Yes'},
             {type: 'cancel', text: 'No'},
@@ -37,11 +43,6 @@ function showPopup() {
         if (btn === 'link') {
                 localStorage.removeItem(postDate.value);
                 text.value = '';
-            
-                deleteBtn.style.background = '#bebebe';
-                setTimeout(() => {
-                    deleteBtn.style.background = '#E5ECE9';
-                  }, "100");
         }
     });
 };
